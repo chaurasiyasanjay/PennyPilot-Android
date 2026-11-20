@@ -75,3 +75,21 @@ Keep the release keystore and passwords private. Never commit signing credential
 | Target SDK | 36 |
 | Java compatibility | 17 |
 | Version | 1.0 (1) |
+
+## Screenshots
+
+| Dashboard | Add transaction |
+|---|---|
+| ![Dashboard](screenshots/Dashboard_NoTransaction.png) | ![Add transaction](screenshots/Add_Transaction.png) |
+
+| Edit transaction | Category filter |
+|---|---|
+| ![Edit transaction](screenshots/Edit_Transaction.png) | ![Category filter](screenshots/Filter.png) |
+
+| Currency selection | Exchange rate |
+|---|---|
+| ![Currency selection](screenshots/Currency_Selection.png) | ![Exchange rate](screenshots/Exchange_Rate.png) |
+
+| Dark theme |
+|---|
+| ![Dark theme](screenshots/DarkTheme.png) |
