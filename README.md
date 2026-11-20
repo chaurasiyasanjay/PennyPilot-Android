@@ -11,10 +11,22 @@ PennyPilot lets users record income and expenses, review financial summaries, fi
 - Filter transactions by category.
 - Persist transactions and categories locally with Room.
 - Save theme and display-currency preferences with DataStore.
-- Convert displayed MYR amounts using live Frankfurter exchange rates.
-- Fall back to MYR values when exchange-rate retrieval fails.
+- Convert displayed MYR amounts using the latest Frankfurter exchange rate for the selected display currency.
+- Show the applied exchange rate and its published date on the dashboard.
+- Fall back to MYR display values if the exchange-rate request fails.
 
 **Currency handling:** Transaction amounts are stored in MYR. Conversion affects display values only; it does not change the stored transaction amounts.
+
+## Exchange rate behavior
+
+- **Provider:** [Frankfurter API](https://frankfurter.dev/) (no API key required).
+- **Request:** PennyPilot calls the latest single-pair rate endpoint, for example:
+  `GET https://api.frankfurter.dev/v2/rate/MYR/USD`.
+- **Supported display currencies:** MYR, USD, EUR, GBP, INR, and SGD.
+- **When rates are requested:** MYR is the default currency and does not require a network request. When another display currency is selected in Settings, PennyPilot requests the latest MYR-to-selected-currency rate.
+- **Dashboard display:** The dashboard shows the applied rate (for example, `1 MYR = … USD`) and the rate date returned by the API.
+- **Conversion behavior:** Transaction amounts are stored in MYR sen. The fetched rate is applied only when formatting dashboard summaries and transaction amounts; the stored values are never converted or changed.
+- **Failure behavior:** If the request fails, PennyPilot displays amounts in MYR and shows an exchange-rate-unavailable message.
 
 ## Tech stack
 
