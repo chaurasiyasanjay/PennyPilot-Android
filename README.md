@@ -16,24 +16,6 @@ PennyPilot lets users record income and expenses, review financial summaries, fi
 
 **Currency handling:** Transaction amounts are stored in MYR. Conversion affects display values only; it does not change the stored transaction amounts.
 
-## Screenshots
-
-| Dashboard | Add transaction |
-|---|---|
-| ![Dashboard](screenshots/Dashboard_NoTransaction.png) | ![Add transaction](screenshots/Add_Transaction.png) |
-
-| Edit transaction | Category filter |
-|---|---|
-| ![Edit transaction](screenshots/Edit_Transaction.png) | ![Category filter](screenshots/Filter.png) |
-
-| Currency selection | Exchange rate |
-|---|---|
-| ![Currency selection](screenshots/Currency_Selection.png) | ![Exchange rate](screenshots/Exchange_Rate.png) |
-
-| Dark theme |
-|---|
-| ![Dark theme](screenshots/DarkTheme.png) |
-
 ## Tech stack
 
 Kotlin · Jetpack Compose · Material 3 · MVVM · Clean Architecture · Coroutines · Flow · Room · DataStore · Retrofit · Hilt · Navigation Compose
